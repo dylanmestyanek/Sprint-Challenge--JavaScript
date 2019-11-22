@@ -30,13 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    _Answer:_ `.forEach()` cycles through an array, where you choose an action to be performed on each item in the array. `.map()` cycles through the array similar to `.forEach()` except, `.map()` returns a new array of the items in the original array, after each item is passed to a callback function.
+
 2. What is the difference between a function and a method?
+
+    _Answer:_ A method is similar to a function; however, they are only called within objects and defined within a class. They can not be called separately. While a regular function can be called entirely on it's own and return it's own unique values, without being attached to any other piece of information.
 
 3. What is closure?
 
+    _Answer:_ Closure appears when nesting functions within other functions. It allows inner functions to have access to the data of the outer function surrounding it. While inner functions can reach outward for data, outer functions can not reach inwards for data.
+
 4. Describe the four rules of the 'this' keyword.
 
+    <b>Rule 1:</b> _Window Binding_ - When nothing else is defined, the global scope will automatically refer `this` to the window object.
+
+    <b>Rule 2:</b> _Implicit Binding_ - When a new object is created from a constructor, like in the example: `const example = new child({});` If a value was called on that object, `this` would refer to the object to left of the dot, for example: `exampleObj.objectKey`. In this case, `this` would point to the `example` object.
+
+    <b>Rule 3:</b> _Explicit Binding_ - When using `.call()` or `.apply()` you are explicitly binding `this` to the constructor you're calling the method on. For example: `Constructor.call(this, attributes)`.
+
+    <b>Rule 4:</b> _New Binding_ - When using the `new` keyword in JavaScript you are creating a new object based on the information from the constructor function. When using the `new` keyword, `this` refers to the new object created. For example, `const example = new object({});` allows `this` to refer to the new object.
+ 
+
 5. Why do we need super() in an extended class?
+
+
+    _Answer:_ While `extends` creates a child constructor of the parent constructor, `super()` is what actually allows access to the parent constructors values, to be used by new objects created with the child constructor.
 
 ## Project Set up
 
